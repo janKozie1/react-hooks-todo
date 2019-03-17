@@ -25,7 +25,7 @@ export default function App() {
         setTodoList(todoList.filter((e, i) => i !== index))
     }
     const completeTodo = (index) => {
-        setTodoList(todoList.map((e, i) => { return i === index ? { ...e, completed: true } : e }))
+        setTodoList(todoList.map((e, i) => { return i === index ? { ...e, completed: !e.completed } : e }))
     }
     const addTodo = (e) => {
         e.preventDefault();
