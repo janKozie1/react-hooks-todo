@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import TodoItem from './TodoItem'
+import TodoItem from './TodoItem';
+import Calendar from './Calendar'
 
 export default function App() {
+
     const [newTodo, updateNewTodo] = useState('')
     const [todoList, setTodoList] = useState([
         {
@@ -41,6 +43,8 @@ export default function App() {
             <form onSubmit={addTodo}>
                 <input type='text' value={newTodo} onChange={e => updateNewTodo(e.target.value)} />
             </form>
+            <Calendar date={new Date()} />
+            
         </div>
     )
 }
