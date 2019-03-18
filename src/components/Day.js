@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-
-const Day = () => {
+import '../styles/Day.css'
+const Day = (props) => {
     return (
-        <div>
-            
+        <div className='day'>
+            {props.day}
         </div>
     );
 };

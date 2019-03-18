@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-
-const Week = () => {
+import '../styles/Week.css'
+const Week = ({days}) => {
     return (
-        <div>
-            
+        <div className='week'>
+            {days.map(e=>e)}
         </div>
     );
 };
