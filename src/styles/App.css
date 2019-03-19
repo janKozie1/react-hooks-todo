@@ -1,0 +1,9 @@
+.app {
+    margin: 0;
+    padding: 0;
+    min-width: 98vw;
+    min-height: 80vh;
+    display:grid;
+    grid-template-rows:4fr 4fr 4fr;
+    grid-template-columns: 4fr 4fr 4fr;
+}
