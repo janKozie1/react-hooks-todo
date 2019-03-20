@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/Day.css'
-const Day = ({ day, selectedDay, updateSelectedDay }) => {
-    console.log(selectedDay)
+const Day = ({ day }) => {
     return (
-        <div className={`day ${selectedDay === day ? 'selected' : ''}`} onClick={() =>{
-            updateSelectedDay(day)
-        }}>
+        <div className={`day`}>
             {day}
         </div>
     );
