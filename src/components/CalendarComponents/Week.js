@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Day from './Day'
-import '../styles/Week.css'
+import '../../styles/Week.css'
 const Week = ({days}) => {
     return (
         <div className='week'>
