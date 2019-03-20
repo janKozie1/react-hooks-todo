@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import '../styles/Day.css'
-const Day = (props) => {
+const Day = ({day,selectedDay}) => {
     return (
-        <div className='day'>
-            {props.day}
+        <div className={`day ${selectedDay===day?'selected':''}`}>
+            {day}
         </div>
     );
 };
