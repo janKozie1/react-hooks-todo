@@ -1,27 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import Day from './Day'
 import Week from './Week'
-import DayOfWeek from './DayOfWeek'
+import DaysNames from './DaysNames'
 
 import { formatCalendar } from '../../functions/formatCalendar'
-import { Months } from '../../data/Months'
 
 import '../../styles/Calendar.css'
 
 const Calendar = ({ date }) => {
-    
-    
-    let [offset, setOffset] = useState(2)
-    let [selectedDay, setSelectedDay] = useState(new Date().getDate())
 
+
+    let [offset, setOffset] = useState(1)
+    let [selectedDay, setSelectedDay] = useState({day:new Date().getDate(),month:new Date().getMonth()})
 
     return (
         <div className='calendar'>
-        {selectedDay}
-            <Week days={['Mo','Tu','We','Th','Fr','Sa','Su']} />
+            <DaysNames offset={offset} />
             {
-                formatCalendar(offset, new Date(date.getFullYear(), date.getMonth(), 1)).map((week,i)=>{
-                    return <Week days={week} key={i}/>
+                formatCalendar(offset, new Date(date.getFullYear(), date.getMonth(), 1)).map((week, i) => {
+                    return <Week days={week} key={i} selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
                 })
             }
         </div>
