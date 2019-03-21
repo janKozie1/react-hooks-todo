@@ -3,3 +3,9 @@
     grid-template-columns: repeat(7,1fr);
     width:100%;
 }
+.week.upper-row{
+    background:#C2185B;
+    color:white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}

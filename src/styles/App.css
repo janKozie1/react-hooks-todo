@@ -2,8 +2,12 @@
     margin: 0;
     padding: 0;
     min-width: 98vw;
-    min-height: 80vh;
+    min-height: 90vh;
     display:grid;
-    grid-template-rows:2fr 6fr 2fr;
-    grid-template-columns: 2fr 6fr 2fr;
+    /* grid-template-rows:2fr 8fr 2fr; */
+    grid-template-columns: 2fr 8fr 2fr;
+    justify-items: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
 }
