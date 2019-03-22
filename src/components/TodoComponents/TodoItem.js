@@ -1,10 +1,15 @@
 
 import React from 'react';
+import TodoButton from './TodoButton'
+
+import '../../styles/TodoItem.css'
 
 export default function TodoItem({ text, index, deleteTodo, completeTodo, status }) {
-    return (<div>
-        <p style={{ textDecoration: status ? 'line-through' : '' }}>{text}</p>
-        <button onClick={() => deleteTodo(index)}>x</button>
-        <button onClick={() => completeTodo(index)}>v</button>
-    </div>)
+    return (
+        <div className='todo-item'>
+            <p className='todo-item-text' style={{ textDecoration: status ? 'line-through' : '' }}>{text}</p>
+            <TodoButton text={'v'} />
+            <TodoButton text={'x'} />
+        </div>
+    )
 }

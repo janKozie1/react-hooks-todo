@@ -19,7 +19,9 @@
 .day.selected {
     color: white;
 }
-
+.day.previous{
+    color:grey;
+}
 .day.selected::before {
     content: '';
     position: absolute;

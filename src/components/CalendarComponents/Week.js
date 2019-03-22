@@ -5,6 +5,7 @@ const Week = ({ days, offset, selectedDay, selectDay }) => {
     return (
         <div className='week'>
             {days.map((day, i) => {
+                console.log(day)
                 return <Day key={i} day={day} offset={offset} selectedDay={selectedDay} selectDay={selectDay} />
             })}
         </div>

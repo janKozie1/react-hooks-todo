@@ -16,10 +16,6 @@ const TodoComponent = () => {
             completed: false,
         },
         {
-            text: 'Go out with friends',
-            completed: false,
-        },
-        {
             text: 'Check out the new album',
             completed: false,
         },
@@ -39,9 +35,7 @@ const TodoComponent = () => {
         <div className='todo-component'>
             <TodoHeader />
             <div className='todo-body'>
-                <form onSubmit={addTodo}>
-                    <input type='text' value={newTodo} onChange={e => updateNewTodo(e.target.value)} />
-                </form>
+                
                 {
                     todoList.map(({ text, completed }, index) => {
                         return <TodoItem text={text} status={completed} key={index} index={index} deleteTodo={deleteTodo} completeTodo={completeTodo} />
