@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import '../../styles/Day.css'
 
-const Day = ({ day, selectedDay, setSelectedDay }) => {
+const Day = ({ day, selectedDay, selectDay }) => {
+    let selected = selectedDay.day === day.day && selectedDay.month === day.month;
     return (
         <div 
-            className={`day ${selectedDay.day === day.day && selectedDay.month === day.month ? 'selected' : ''}`} 
-            onClick={() => setSelectedDay({ day : day.day, month : day.month })} >
+            className={`day ${ selected ? 'selected' : ''}`} 
+            onClick={() => selectDay({ day : day.day, month : day.month })} >
             {day.day}
         </div>
     );

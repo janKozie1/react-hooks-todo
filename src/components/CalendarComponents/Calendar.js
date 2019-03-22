@@ -10,16 +10,28 @@ const Calendar = ({ date }) => {
 
 
     let [offset, setOffset] = useState(1)
-    let [selectedDay, setSelectedDay] = useState({day:new Date().getDate(),month:new Date().getMonth()})
+    let [selectedDay, setSelectedDay] = useState({ day: null, month: null })
+
+    let selectDay = ({ day, month }) => {
+        if (!isNaN(parseInt(selectedDay.day)) || day !== selectedDay.day || month !== selectedDay.month) {
+            console.log( month !== selectedDay.month)
+            setSelectedDay({ day, month })
+        } else if (selectedDay.day === day && selectedDay.month === month) {
+            setSelectedDay({ day: null, month: null })
+        }
+    }
 
     return (
         <div className='calendar'>
             <DaysNames offset={offset} />
             {
                 formatCalendar(offset, new Date(date.getFullYear(), date.getMonth(), 1)).map((week, i) => {
-                    return <Week days={week} key={i} selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
+                    return <Week days={week} key={i} selectedDay={selectedDay} selectDay={selectDay} />
                 })
             }
+            <div className='todo'>
+
+            </div>
         </div>
     );
 };

@@ -10,9 +10,10 @@
     box-sizing: border-box;
     position: relative;
     z-index: 1;
-    font-family: 'Roboto';
+    
     cursor: pointer;
     font-variant-numeric: tabular-nums;
+    color:#212121;
 }
 
 .day.selected {
@@ -28,6 +29,8 @@
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
     z-index: -1;
     border-radius: 50%;
+    left:14%;
+    top:15%;
     transform: scale(0);
     animation: select 0.5s  ease-out forwards;
 }

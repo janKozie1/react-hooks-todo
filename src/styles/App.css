@@ -5,9 +5,12 @@
     min-height: 90vh;
     display:grid;
     /* grid-template-rows:2fr 8fr 2fr; */
-    grid-template-columns: 2fr 8fr 2fr;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-column-gap: 1em;
     justify-items: center;
     align-content: center;
     justify-items: center;
     align-items: center;
+    font-family: 'Roboto';
 }
+

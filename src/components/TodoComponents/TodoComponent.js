@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import TodoItem from './TodoItem'
-const TodoList = () => {
+import TodoHeader from './TodoHeader'
+
+import '../../styles/TodoComponent.css'
+
+const TodoComponent = () => {
     const [newTodo, updateNewTodo] = useState('')
     const [todoList, setTodoList] = useState([
         {
@@ -32,17 +36,21 @@ const TodoList = () => {
     }
 
     return (
-        <div>
-            {
-                todoList.map(({ text, completed }, index) => {
-                    return <TodoItem text={text} status={completed} key={index} index={index} deleteTodo={deleteTodo} completeTodo={completeTodo} />
-                })
-            }
-            <form onSubmit={addTodo}>
-                <input type='text' value={newTodo} onChange={e => updateNewTodo(e.target.value)} />
-            </form>
+        <div className='todo-component'>
+            <TodoHeader />
+            <div className='todo-body'>
+                <form onSubmit={addTodo}>
+                    <input type='text' value={newTodo} onChange={e => updateNewTodo(e.target.value)} />
+                </form>
+                {
+                    todoList.map(({ text, completed }, index) => {
+                        return <TodoItem text={text} status={completed} key={index} index={index} deleteTodo={deleteTodo} completeTodo={completeTodo} />
+                    })
+                }
+            </div>
+
         </div>
     );
 };
 
-export default TodoList;
+export default TodoComponent;
