@@ -1,0 +1,22 @@
+.month-selection{
+   display:flex;
+   align-content: center;
+   justify-content: center;
+}
+
+.month-selection-button{
+    padding:10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:contain;
+    cursor:pointer;
+}
+.month-selection-button.left{
+    background-image:url('../images/left.svg')
+
+}
+
+.month-selection-button.right{
+    background-image:url('../images/right.svg')
+    
+}

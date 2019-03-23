@@ -8,8 +8,8 @@ export default function TodoItem({ text, index, deleteTodo, completeTodo, status
     return (
         <div className='todo-item'>
             <p className='todo-item-text' style={{ textDecoration: status ? 'line-through' : '' }}>{text}</p>
-            <TodoButton text={'v'} />
-            <TodoButton text={'x'} />
+            <TodoButton text={'v'} onClick={completeTodo} index={index} />
+            <TodoButton text={'x'} onClick={deleteTodo} index={index} />
         </div>
     )
 }
