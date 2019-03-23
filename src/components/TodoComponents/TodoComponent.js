@@ -19,6 +19,19 @@ const TodoComponent = () => {
             text: 'Check out the new album',
             completed: false,
         },
+        {
+            text: 'Do homework',
+            completed: false,
+        },
+        {
+            text: 'Make groceries',
+            completed: false,
+        },
+        {
+            text: 'Check out the new album',
+            completed: false,
+        },
+        
     ]);
     const deleteTodo = (index) => {
         setTodoList(todoList.filter((e, i) => i !== index))

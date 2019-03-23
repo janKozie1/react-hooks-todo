@@ -6,11 +6,11 @@ import { formatCalendar } from '../../functions/formatCalendar'
 
 import '../../styles/Calendar.css'
 
-const Calendar = ({ date }) => {
+const Calendar = ({ date,selectedDay,setSelectedDay }) => {
 
 
     let [offset, setOffset] = useState(1)
-    let [selectedDay, setSelectedDay] = useState({ day: null, month: null })
+   
 
     let selectDay = ({ day, month }) => {
         if (!isNaN(parseInt(selectedDay.day)) || day !== selectedDay.day || month !== selectedDay.month) {
@@ -25,8 +25,8 @@ const Calendar = ({ date }) => {
         <div className='calendar'>
             <DaysNames offset={offset} />
             {
-                formatCalendar(offset, new Date(date.getFullYear(), date.getMonth(), 1)).map((week, i) => {
-                    return <Week days={week} key={i} selectedDay={selectedDay} selectDay={selectDay} />
+                formatCalendar(offset, new Date(date.year,date.month, 1)).map((week, i) => {
+                    return <Week days={week} key={i} selectedDay={selectedDay} selectDay={selectDay} month={date.month} />
                 })
             }
             <div className='todo'>

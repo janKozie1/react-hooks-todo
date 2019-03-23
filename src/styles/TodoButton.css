@@ -1,5 +1,5 @@
 .todo-button{
-    padding:5px 7px;
+    padding:7px 7px;
   
     font-size:0.8em;
     border:1px solid #C2185B;
@@ -10,4 +10,15 @@
     align-items:center;
     justify-content: center;
     
+
+    background-size:13px 13px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.todo-button.confirm{
+    background-image:url('../images/confirm.svg');
+}
+
+.todo-button.delete{
+    background-image:url('../images/delete.svg');
 }
