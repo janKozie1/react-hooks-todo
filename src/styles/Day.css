@@ -23,6 +23,7 @@
     color: white;
 }
 
+
 .day.selected::before {
     content: '';
     position: absolute;

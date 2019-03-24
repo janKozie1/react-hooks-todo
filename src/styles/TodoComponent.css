@@ -1,6 +1,5 @@
 .todo-component{
-    grid-column: 3/4;
-    grid-row:2/3;
+    
     align-self: center;
     justify-self:left;
     height:100%;
@@ -11,6 +10,7 @@
     border-radius:5px;
     border: 2px solid #C2185B;
     overflow-y:scroll;
+    width:100%;
     
 }
 .todo-component::-webkit-scrollbar{
