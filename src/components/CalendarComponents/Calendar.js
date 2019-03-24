@@ -9,7 +9,7 @@ import '../../styles/Calendar.css'
 const Calendar = ({ date,selectedDay,setSelectedDay }) => {
 
 
-    let [offset, setOffset] = useState(1)
+    let [offset, setOffset] = useState(2)
    
 
     let selectDay = ({ day, month }) => {
@@ -23,7 +23,7 @@ const Calendar = ({ date,selectedDay,setSelectedDay }) => {
 
     return (
         <div className='calendar'>
-            <DaysNames offset={offset} />
+            <DaysNames offset={offset} setOffset={setOffset} />
             {
                 formatCalendar(offset, new Date(date.year,date.month, 1)).map((week, i) => {
                     return <Week days={week} key={i} selectedDay={selectedDay} selectDay={selectDay} month={date.month} />
