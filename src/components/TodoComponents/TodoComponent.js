@@ -4,8 +4,8 @@ import TodoHeader from './TodoHeader'
 
 import '../../styles/TodoComponent.css'
 
-const TodoComponent = ({style}) => {
-    console.log(style)
+const TodoComponent = () => {
+
     const [newTodo, updateNewTodo] = useState('')
     const [todoList, setTodoList] = useState([
         {
@@ -46,7 +46,7 @@ const TodoComponent = ({style}) => {
     }
 
     return (
-        <div className='todo-component' style={{opacity:style.opacity,transform:`translateX(${style.x}px)`,zIndex:style.z}} >
+        <div className='todo-component'>
             <TodoHeader />
             <div className='todo-body'>
                 
