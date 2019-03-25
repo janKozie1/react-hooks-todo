@@ -6,7 +6,7 @@ const Day = ({ day, selectedDay, selectDay, month }) => {
     return (
         <div
             className={`day ${selected ? 'selected' : ''} ${day.month === month ? '' : 'previous'} `}
-            onClick={() => selectDay({ day: day.day, month: day.month })} >
+            onClick={() => selectDay({ day:selected?null: day.day, month:selected?null: day.month })} >
             {day.day}
         </div>
     );
