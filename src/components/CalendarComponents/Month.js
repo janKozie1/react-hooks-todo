@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Week from './Week';
 import { formatCalendar } from '../../functions/formatCalendar'
-import { useSpring, animated ,config} from 'react-spring';
+import { animated } from 'react-spring';
 
 const Month = ({ offset, date, type, selectedDay, selectDay, style }) => {
+    if(type=='previous'){
+        console.log(date)
+    }
     return (
         <animated.div style={style} className={`calendar-days ${type}`}>
             {formatCalendar(offset, new Date(date.year, date.month, 1)).map((week, i) => {

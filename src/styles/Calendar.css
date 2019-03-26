@@ -13,7 +13,7 @@
 .calendar-days-container{
     display:grid;
     position: relative;
-    
+    overflow: hidden;
 }
 .calendar-days {
     display:grid;

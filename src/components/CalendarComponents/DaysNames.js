@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../../styles/Day.css'
 import '../../styles/Week.css'
 
@@ -10,7 +10,7 @@ const DaysNames = ({ offset, setOffset }) => {
             offset:0,
         },
         {
-            abbr:'Fr',
+            abbr:'Mo',
             offset:6,
         },
         {

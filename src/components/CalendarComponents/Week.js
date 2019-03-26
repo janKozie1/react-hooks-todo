@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Day from './Day'
 import '../../styles/Week.css'
 const Week = ({ days, offset, selectedDay, selectDay ,month}) => {
