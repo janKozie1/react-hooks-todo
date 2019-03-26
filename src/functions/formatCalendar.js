@@ -1,6 +1,7 @@
 import { Months } from '../data/Months'
 
 export let formatCalendar = (offset, first) => {
+    console.log(first)
     let month = new Array(6).fill(null).map((el, index) => new Array(7).fill(null).map((el2, index2) => {
         let temp = index * 7 - offset + index2 - Number(first.getDay());
         let previousMonth = first.getMonth() - 1 < 0 ? 11 : first.getMonth() - 1

@@ -5,9 +5,33 @@
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: 1fr 6fr;
     box-shadow: 0px 0px 5px rgba(180, 131, 165, 0.34);
     border-radius: 20px;
     transition: scale 1s;
 }
+.calendar-days-container{
+    display:grid;
+    position: relative;
+    overflow: hidden;
+}
+.calendar-days {
+    display:grid;
+    grid-template-rows:6fr;
+    width:100%;
+    height:100%;
+}
 
+.calendar-days.previous, .calendar-days.next{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+}
+.calendar-days.previous{
+    left:-100%;
+}
+.calendar-days.next{
+    left:100%;
+}

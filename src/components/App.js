@@ -12,12 +12,9 @@ export default function App() {
         return { day: temp.getDate(), month: temp.getMonth(), year: temp.getFullYear() }
     })
     let [selectedDay, setSelectedDay] = useState({ day: null, month: null })
-    let {opacity,x} = useSpring({ opacity: 1,x:0, from: { opacity: 0,x:-500 },config:config.slow });
+    let style = useSpring({ opacity: 1, transform:`translateX(0px)`, from: { opacity: 0,transform:`translate(-500px)` },config:config.slow });
     return (
-        <animated.div style={{
-            opacity,
-            transform:x.interpolate(x=>`translateX(${x}px)`)
-        }} className='app'>
+        <animated.div style={style} className='app'>
             <MonthSelection month={date.month} setDate={setDate} date={date} />
             <div className='container'>
 
