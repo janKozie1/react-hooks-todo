@@ -13,7 +13,7 @@
 .calendar-days-container{
     display:grid;
     position: relative;
-    overflow: hidden;
+    
 }
 .calendar-days {
     display:grid;
@@ -30,8 +30,8 @@
     height:100%;
 }
 .calendar-days.previous{
-    left:-100%;
+    transform: translateX(-100%)
 }
 .calendar-days.next{
-    left:100%;
+    transform: translateX(100%)
 }

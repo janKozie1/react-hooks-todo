@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import '../../styles/Day.css'
 
 const Day = ({ day, selectedDay, selectDay, month }) => {
-    console.log(selectedDay)
     let selected = selectedDay.day === day.day && selectedDay.month === day.month;
     return (
         <div
