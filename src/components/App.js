@@ -5,6 +5,7 @@ import TodoComponent from './TodoComponents/TodoComponent'
 import MonthSelection from './MonthSelection'
 import '../styles/App.css'
 import { useSpring, animated ,config} from 'react-spring'
+import fire from './fire'
 
 export default function App() {
     let [date, setDate] = useState(_ => {
@@ -19,7 +20,7 @@ export default function App() {
             <MonthSelection month={date.month} setDirection={setDirection} />
             <div className='container'>
                 <Calendar date={date} selectedDay={selectedDay} setSelectedDay={setSelectedDay} direction={direction} setDate={setDate} setDirection={setDirection}/>
-                <TodoComponent date={date} />
+                <TodoComponent selectedDay={selectedDay} />
             </div>
         </animated.div>
     )

@@ -2,7 +2,6 @@
     
     align-self: center;
     justify-self:left;
-    height:100%;
     display:grid;
     grid-template-rows: 1fr 6fr;
     box-sizing: border-box;
@@ -10,7 +9,8 @@
     border-radius:5px;
     border: 2px solid #C2185B;
     overflow-y:scroll;
-    width:100%;
+    width:250px;
+    height:100%;
     
 }
 .todo-component::-webkit-scrollbar{

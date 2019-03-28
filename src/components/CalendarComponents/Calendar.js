@@ -7,7 +7,7 @@ import Month from './Month'
 import '../../styles/Calendar.css'
 
 const Calendar = ({ date, setDate, selectedDay, setSelectedDay, direction, setDirection }) => {
-    let [offset, setOffset] = useState(-1)
+    let [offset, setOffset] = useState(0)
     let previousMonth = date.month - 1 < 0 ? { year: date.year - 1, month: 11, day: null } : { year: date.year, month: date.month - 1, day: null };
     let nextMonth = date.month + 1 > 11 ? { year: date.year + 1, month: 0, day: null } : { year: date.year, month: date.month + 1, day: null };
 

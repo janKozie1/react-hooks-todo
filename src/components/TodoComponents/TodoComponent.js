@@ -4,34 +4,58 @@ import TodoHeader from './TodoHeader'
 
 import '../../styles/TodoComponent.css'
 
-const TodoComponent = () => {
+const TodoComponent = ({selectedDay}) => {
 
     const [newTodo, updateNewTodo] = useState('')
     const [todoList, setTodoList] = useState([
         {
             text: 'Do homework',
             completed: false,
+            date:{
+                day:25,
+                month:2,
+            }
         },
         {
             text: 'Make groceries',
             completed: false,
+            date:{
+                day:25,
+                month:2,
+            }
         },
         {
             text: 'Check out the new album',
             completed: false,
+            date:{
+                day:21,
+                month:2,
+            }
         },
         {
             text: 'Do homework',
             completed: false,
+            date:{
+                day:23,
+                month:2,
+            }
         },
         {
             text: 'Make groceries',
             completed: false,
+            date:{
+                day:24,
+                month:2,
+            }
         },
         {
             text: 'Check out the new album',
             completed: false,
-        },
+            date:{
+                day:25,
+                month:2,
+            }
+        }
         
     ]);
     const deleteTodo = (index) => {
@@ -51,7 +75,7 @@ const TodoComponent = () => {
             <div className='todo-body'>
                 
                 {
-                    todoList.map(({ text, completed }, index) => {
+                    todoList.filter((e => e.date.day==selectedDay.day && e.date.month == selectedDay.month)).map(({ text, completed }, index) => {
                         return <TodoItem text={text} status={completed} key={index} index={index} deleteTodo={deleteTodo} completeTodo={completeTodo} />
                     })
                 }

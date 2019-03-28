@@ -15,6 +15,14 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-   align-self: baseline;
+    align-self: baseline;
+    font-family:'Roboto';
+    border:none;
+    font-family:'Roboto';
+    padding:5px;
 
+}
+.todo-item-text:focus{
+   
+    outline:none;
 }
