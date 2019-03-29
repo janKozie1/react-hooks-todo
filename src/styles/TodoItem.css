@@ -11,6 +11,9 @@
 
     
 }
+.todo-item-input{
+    width:100%;
+}
 .todo-item-text{
     text-overflow: ellipsis;
     overflow: hidden;
