@@ -18,11 +18,10 @@
     align-self: baseline;
     font-family:'Roboto';
     border:none;
-    font-family:'Roboto';
     padding:5px;
+    font-size:1em;
 
 }
-.todo-item-text:focus{
-   
-    outline:none;
+input{
+    font-family:'Roboto'
 }

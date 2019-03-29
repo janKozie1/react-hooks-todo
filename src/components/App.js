@@ -17,7 +17,8 @@ export default function App() {
     let style = useSpring({ opacity: 1, transform:`translateX(0px)`, from: { opacity: 0,transform:`translate(-500px)` },config:config.slow });
     return (
         <animated.div style={style} className='app'>
-            <MonthSelection month={date.month} setDirection={setDirection} />
+        
+            <MonthSelection month={date.month} setDirection={setDirection} direction={direction} />
             <div className='container'>
                 <Calendar date={date} selectedDay={selectedDay} setSelectedDay={setSelectedDay} direction={direction} setDate={setDate} setDirection={setDirection}/>
                 <TodoComponent selectedDay={selectedDay} />
