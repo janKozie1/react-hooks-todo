@@ -4,7 +4,6 @@ import { useSpring, config,animated } from 'react-spring';
 import { Months } from '../data/Months';
 import '../styles/MonthSelection.css'
 const MonthSelection = ({ month, setDirection, direction }) => {
-    console.log(direction)
     let positions = {
         first: {
             from: -100,

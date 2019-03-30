@@ -18,7 +18,7 @@ export default function App() {
     let [direction, setDirection] = useState(null)
     let [selectedDay, setSelectedDay] = useState({ day: null, month: null, year: null })
     let style = useSpring({ opacity: 1, transform: `translateX(0px)`, from: { opacity: 0, transform: `translate(-500px)` }, config: config.slow });
-
+    console.log(daysWithTasks)
     return (
         <animated.div style={style} className='app'>
             <Authorization />

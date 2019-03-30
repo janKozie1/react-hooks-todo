@@ -1,12 +1,15 @@
 import React from 'react';
-import '../../styles/Day.css'
 
-const Day = ({ day, selectedDay, selectDay, month }) => {
-    let selected = selectedDay.day === day.day && selectedDay.month === day.month;
+import '../../styles/Day.css'
+import { compareDays } from '../../functions/comapreDays';
+
+const Day = ({ day, selectedDay, selectDay, month, year }) => {
+
+
     return (
         <div
-            className={`day ${selected ? 'selected' : ''} ${day.month === month ? '' : 'previous'} `}
-            onClick={() => selectDay({ day:selected?null: day.day, month:selected?null: day.month })} >
+            className={`day ${compareDays(selectedDay, day) ? 'selected' : ''} ${day.month === month ? '' : 'previous'} `}
+            onClick={() => selectDay({ day: day.day, month: day.month, year: day.year })} >
             {day.day}
         </div>
     );
