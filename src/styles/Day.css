@@ -14,7 +14,16 @@
     font-variant-numeric: tabular-nums;
     color: #212121;
 }
-
+.day.with-tasks::after{
+    content:'';
+    position: absolute;
+    align-self:flex-start;
+    top:25%;
+    width:7%;
+    height:7%;
+    border-radius:100%;
+    background:#E91E63;
+}
 .day.previous {
     color: grey;
 }
@@ -23,7 +32,9 @@
     color: white;
 }
 
-
+.day.selected.with-tasks::after{
+    background:white;
+}
 .day.selected::before {
     content: '';
     position: absolute;
@@ -35,8 +46,8 @@
     border-radius: 50%;
     left: 14%;
     top: 15%;
-    transform: scale(0);
-    animation: select 0.5s ease-out forwards;
+    /* transform: scale(0);
+    animation: select 0.5s ease-out forwards; */
 }
 
 @keyframes select {

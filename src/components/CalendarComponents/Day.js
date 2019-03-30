@@ -3,12 +3,11 @@ import React from 'react';
 import '../../styles/Day.css'
 import { compareDays } from '../../functions/comapreDays';
 
-const Day = ({ day, selectedDay, selectDay, month, year }) => {
-
-
+const Day = ({ day, selectedDay, selectDay, month, daysWithTasks }) => {
+    let hasTasks = daysWithTasks.filter(e=>compareDays(day,e)).filter(e=>e).length;
     return (
         <div
-            className={`day ${compareDays(selectedDay, day) ? 'selected' : ''} ${day.month === month ? '' : 'previous'} `}
+            className={`day ${compareDays(selectedDay, day) ? 'selected' : ''} ${hasTasks? 'with-tasks':''} ${day.month === month ? '' : 'previous'} `}
             onClick={() => selectDay({ day: day.day, month: day.month, year: day.year })} >
             {day.day}
         </div>

@@ -6,7 +6,7 @@ import Month from './Month'
 
 import '../../styles/Calendar.css'
 
-const Calendar = ({ date, setDate, selectedDay, setSelectedDay, direction, setDirection }) => {
+const Calendar = ({ date, setDate, selectedDay, setSelectedDay, direction, setDirection, daysWithTasks }) => {
     let [offset, setOffset] = useState(0)
     let previousMonth = date.month - 1 < 0 ? { year: date.year - 1, month: 11, day: null } : { year: date.year, month: date.month - 1, day: null };
     let nextMonth = date.month + 1 > 11 ? { year: date.year + 1, month: 0, day: null } : { year: date.year, month: date.month + 1, day: null };
@@ -41,9 +41,9 @@ const Calendar = ({ date, setDate, selectedDay, setSelectedDay, direction, setDi
         <div className='calendar'>
             <DaysNames offset={offset} setOffset={setOffset} />
             <div className='calendar-days-container'>
-                <Month offset={offset} style={direction ? style[0] : {}} date={previousMonth} type={'previous'} selectedDay={selectedDay} selectDay={selectDay} />
-                <Month offset={offset} style={direction ? style[1] : {}} date={date} type={'current'} selectedDay={selectedDay} selectDay={selectDay} />
-                <Month offset={offset} style={direction ? style[2] : {}} date={nextMonth} type={'next'} selectedDay={selectedDay} selectDay={selectDay} />{/*next and previous are currently swapped*/}
+                <Month offset={offset} style={direction ? style[0] : {}} date={previousMonth} type={'previous'} selectedDay={selectedDay} selectDay={selectDay} daysWithTasks={daysWithTasks} />
+                <Month offset={offset} style={direction ? style[1] : {}} date={date} type={'current'} selectedDay={selectedDay} selectDay={selectDay} daysWithTasks={daysWithTasks} />
+                <Month offset={offset} style={direction ? style[2] : {}} date={nextMonth} type={'next'} selectedDay={selectedDay} selectDay={selectDay} daysWithTasks={daysWithTasks} />{/*next and previous are currently swapped*/}
 
             </div>
         </div>

@@ -18,13 +18,12 @@ export default function App() {
     let [direction, setDirection] = useState(null)
     let [selectedDay, setSelectedDay] = useState({ day: null, month: null, year: null })
     let style = useSpring({ opacity: 1, transform: `translateX(0px)`, from: { opacity: 0, transform: `translate(-500px)` }, config: config.slow });
-    console.log(daysWithTasks)
     return (
         <animated.div style={style} className='app'>
             <Authorization />
             <MonthSelection month={date.month} setDirection={setDirection} direction={direction} />
             <div className='container'>
-                <Calendar date={date} setDate={setDate} selectedDay={selectedDay} setSelectedDay={setSelectedDay} direction={direction} setDirection={setDirection} />
+                <Calendar date={date} setDate={setDate} selectedDay={selectedDay} setSelectedDay={setSelectedDay} direction={direction} setDirection={setDirection} daysWithTasks={daysWithTasks} />
                 <TodoComponent selectedDay={selectedDay} setDaysWithTasks={setDaysWithTasks} />
             </div>
         </animated.div>
