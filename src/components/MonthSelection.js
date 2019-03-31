@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useSpring, config,animated } from 'react-spring';
+import React from 'react';
+import { useSpring, animated } from 'react-spring';
 
 import { Months } from '../data/Months';
 import '../styles/MonthSelection.css'
