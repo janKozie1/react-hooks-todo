@@ -1,8 +1,9 @@
 import React from 'react';
+import { animated } from 'react-spring';
 
 import Week from './Week';
 import { formatCalendar } from '../../functions/formatCalendar'
-import { animated } from 'react-spring';
+
 
 const Month = ({ offset, date, type, selectedDay, selectDay, style, daysWithTasks }) => {
 

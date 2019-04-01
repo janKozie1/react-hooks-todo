@@ -1,6 +1,9 @@
 import React from 'react';
+
 import Day from './Day'
+
 import '../../styles/Week.css'
+
 const Week = ({ days, offset, selectedDay, selectDay, month, year,daysWithTasks }) => {
     return (
         <div className='week'>

@@ -1,7 +1,7 @@
 .app {
     margin: 0;
     padding: 0;
-    min-width: 98vw;
+    min-width: 100vw;
     min-height: 90vh;
     display:grid;
     /* grid-template-rows:2fr 8fr 2fr; */
@@ -9,8 +9,7 @@
     grid-column-gap: 1em;
     justify-items: center;
     align-content: center;
-    justify-items: center;
-    align-items: center;
+    
     font-family: 'Roboto';
     grid-row-gap: 1em;
 }
@@ -22,3 +21,4 @@
     grid-column-gap: 1em;
     grid-template-columns: 6fr 3fr;
 }
+

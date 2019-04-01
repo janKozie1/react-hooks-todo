@@ -2,7 +2,9 @@ import React from 'react';
 import { useSpring, animated } from 'react-spring';
 
 import { Months } from '../data/Months';
+
 import '../styles/MonthSelection.css'
+
 const MonthSelection = ({ month, setDirection, direction }) => {
     let positions = {
         first: {

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useSpring, config } from 'react-spring';
+import React, { useState } from 'react';
+import { useSpring } from 'react-spring';
 
 import DaysNames from './DaysNames'
 import Month from './Month'

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
+
 import TodoItem from './TodoItem'
 import TodoHeader from './TodoHeader'
 import NewTodo from './NewTodo'
-
-import { compareDays } from '../../functions/comapreDays'
 
 import '../../styles/TodoComponent.css'
 
@@ -16,7 +15,6 @@ const TodoComponent = ({ selectedDay, setDaysWithTasks }) => {
         setTodoList(todoList.map((e, i) => { return i === index ? { ...e, completed: !e.completed } : e }))
     }
     const addTodo = (e) => {
-        console.log(selectedDay)
         return selectedDay.day && selectedDay.month ? setTodoList([...todoList, { text: e, completed: false, day: selectedDay.day, month: selectedDay.month,year :selectedDay.year }]) : null
     }
     useEffect(() => {
