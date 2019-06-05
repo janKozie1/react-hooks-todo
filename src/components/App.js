@@ -6,7 +6,10 @@ import TodoComponent from './TodoComponents/TodoComponent'
 import MonthSelection from './MonthSelection'
 
 import '../styles/App.css'
-
+document.querySelector('html').style.height="1px"
+document.querySelector('html').style.minHeight="100%"
+document.body.style.height="1px";
+document.body.style.minHeight="100%";
 
 export default function App() {
     let [date, setDate] = useState(_ => {

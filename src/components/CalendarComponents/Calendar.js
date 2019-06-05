@@ -43,8 +43,7 @@ const Calendar = ({ date, setDate, selectedDay, setSelectedDay, direction, setDi
             <div className='calendar-days-container'>
                 <Month offset={offset} style={direction ? style[0] : {}} date={previousMonth} type={'previous'} selectedDay={selectedDay} selectDay={selectDay} daysWithTasks={daysWithTasks} />
                 <Month offset={offset} style={direction ? style[1] : {}} date={date} type={'current'} selectedDay={selectedDay} selectDay={selectDay} daysWithTasks={daysWithTasks} />
-                <Month offset={offset} style={direction ? style[2] : {}} date={nextMonth} type={'next'} selectedDay={selectedDay} selectDay={selectDay} daysWithTasks={daysWithTasks} />{/*next and previous are currently swapped*/}
-
+                <Month offset={offset} style={direction ? style[2] : {}} date={nextMonth} type={'next'} selectedDay={selectedDay} selectDay={selectDay} daysWithTasks={daysWithTasks} />
             </div>
         </div>
     );

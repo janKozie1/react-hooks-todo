@@ -2,7 +2,7 @@
    
     align-self: center;
     justify-self: center;
-    height: 100%;
+   
     width: 100%;
     display: grid;
     grid-template-rows: 1fr 6fr;
@@ -10,6 +10,13 @@
     border-radius: 20px;
     transition: scale 1s;
 }
+
+@media only screen and (max-width:720px) {
+    .calendar{
+        margin-bottom:20px;
+    }
+}
+
 .calendar-days-container{
     display:grid;
     position: relative;
