@@ -1,15 +1,15 @@
 {
-  "main.css": "/todo-hooks/static/css/main.7bf15f54.chunk.css",
-  "main.js": "/todo-hooks/static/js/main.be79be86.chunk.js",
-  "main.js.map": "/todo-hooks/static/js/main.be79be86.chunk.js.map",
-  "runtime~main.js": "/todo-hooks/static/js/runtime~main.12f1cd5e.js",
-  "runtime~main.js.map": "/todo-hooks/static/js/runtime~main.12f1cd5e.js.map",
-  "static/js/2.bcb2b36f.chunk.js": "/todo-hooks/static/js/2.bcb2b36f.chunk.js",
-  "static/js/2.bcb2b36f.chunk.js.map": "/todo-hooks/static/js/2.bcb2b36f.chunk.js.map",
-  "index.html": "/todo-hooks/index.html",
-  "precache-manifest.2bfeaf8a065bddee6ef1ea4d077f8317.js": "/todo-hooks/precache-manifest.2bfeaf8a065bddee6ef1ea4d077f8317.js",
-  "service-worker.js": "/todo-hooks/service-worker.js",
-  "static/css/main.7bf15f54.chunk.css.map": "/todo-hooks/static/css/main.7bf15f54.chunk.css.map",
-  "static/media/TodoButton.css": "/todo-hooks/static/media/delete.a15a5733.svg",
-  "static/media/MonthSelection.css": "/todo-hooks/static/media/right.c042f731.svg"
+  "main.css": "/react-hooks-todo/static/css/main.436bb95c.chunk.css",
+  "main.js": "/react-hooks-todo/static/js/main.be79be86.chunk.js",
+  "main.js.map": "/react-hooks-todo/static/js/main.be79be86.chunk.js.map",
+  "runtime~main.js": "/react-hooks-todo/static/js/runtime~main.68f30e0c.js",
+  "runtime~main.js.map": "/react-hooks-todo/static/js/runtime~main.68f30e0c.js.map",
+  "static/js/2.bcb2b36f.chunk.js": "/react-hooks-todo/static/js/2.bcb2b36f.chunk.js",
+  "static/js/2.bcb2b36f.chunk.js.map": "/react-hooks-todo/static/js/2.bcb2b36f.chunk.js.map",
+  "index.html": "/react-hooks-todo/index.html",
+  "precache-manifest.5747e191a10d6fbb6ff377c0507c4b78.js": "/react-hooks-todo/precache-manifest.5747e191a10d6fbb6ff377c0507c4b78.js",
+  "service-worker.js": "/react-hooks-todo/service-worker.js",
+  "static/css/main.436bb95c.chunk.css.map": "/react-hooks-todo/static/css/main.436bb95c.chunk.css.map",
+  "static/media/TodoButton.css": "/react-hooks-todo/static/media/delete.a15a5733.svg",
+  "static/media/MonthSelection.css": "/react-hooks-todo/static/media/right.c042f731.svg"
 }
